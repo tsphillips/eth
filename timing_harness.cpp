@@ -76,7 +76,7 @@ void loop(const char* interface1, const char* interface2) {
       exit(1);
     } // if open failed
     if (pcap_setnonblock(handle1, 1, errbuf) == -1) {
-      std::cerr << "ERROR: (interface2) pcap_setnonblock(): " << errbuf << std::endl;
+      std::cerr << "ERROR: (interface1) pcap_setnonblock(): " << errbuf << std::endl;
       exit(1);
     } // if nonblock error
     std::cout << "Initialized " << interface1 << std::endl;
